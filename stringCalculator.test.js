@@ -15,3 +15,7 @@ test("add comma-separated two numbers", () => {
 test("adds multiple numbers", () => {
   expect(add("1,2,3,4")).toBe(10);
 });
+
+test("supports newline as delimiter", () => {
+  expect(add("1\n2,3")).toBe(6);
+});
