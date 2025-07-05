@@ -11,3 +11,7 @@ test("returns number if only one number is provided", () => {
 test("add comma-separated two numbers", () => {
   expect(add("1,3")).toBe(4);
 });
+
+test("adds multiple numbers", () => {
+  expect(add("1,2,3,4")).toBe(10);
+});
