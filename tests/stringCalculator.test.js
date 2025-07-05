@@ -1,4 +1,4 @@
-const add = require('./stringCalculator');
+const add = require('../src/stringCalculator');
 
 test("return 0 for empty string", () => {
     expect(add("")).toBe(0);
@@ -31,3 +31,7 @@ test("throws exception on single negative number", () => {
 test("throws exception for all negative numbers", () => {
   expect(() => add("-1,-4,-2,1,8,-7")).toThrow("negative numbers not allowed: -1, -4, -2, -7");
 });
+
+test("ignores numbers greater than 1000", () => {
+  expect(add("1,1001,1002")).toBe(1);
+})
