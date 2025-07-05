@@ -1,8 +1,16 @@
 function add(numbers){
     if(numbers === "") return 0;
-    if(!numbers.includes(",")) return parseInt(numbers);
+
+    let delimiters = /,|\n/;
+    
+    if(numbers.startsWith("//")){
+        const match = numbers.match(/^\/\/(.+)\n(.*)$/s);
+
+        delimiters = new RegExp(match[1]);
+        numbers = match[2];
+    }
         
-    const nums = numbers.split(/,|\n/).map(Number);
+    const nums = numbers.split(delimiters).map(Number);
     return nums.reduce((sum,val) => sum+val, 0);
 }
 
