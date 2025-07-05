@@ -2,9 +2,13 @@
 
 This is a simple project that uses **Test-Driven Development (TDD)** to build a string calculator in JavaScript. TDD means we write tests first, then add code to make the tests pass. It helps us build reliable and clean code step by step.
 
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/aa0fe180-db9f-4cf1-b85f-3b4193f4e57a" width="550" />
+</div>
+
 ---
 
-## What this project does
+## What this project does ?
 
 * Adds numbers from a string input
 * Supports unlimited numbers
@@ -79,7 +83,7 @@ add("-1,-4,-2,1,8,-7")            // throws error: negative numbers not allowed:
 ### Test Results
 
 <div align="center">
-  <img src="![image](https://github.com/user-attachments/assets/23ff726d-0b17-462a-9207-af0d9f47d0b9)" width="600" />
+  <img src="https://github.com/user-attachments/assets/23ff726d-0b17-462a-9207-af0d9f47d0b9" width="550" />
 </div>
 
 ---
@@ -103,3 +107,4 @@ This project uses clean, small commits for each step:
 * Jest – for running unit tests
 
 ---
+
