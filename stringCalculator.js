@@ -11,6 +11,12 @@ function add(numbers){
     }
         
     const nums = numbers.split(delimiters).map(Number);
+    const negatives = nums.filter(n => n<0);
+
+    if(negatives.length > 0){
+        throw new Error("negative numbers not allowed: " + negatives.join(", "));
+    }
+
     return nums.reduce((sum,val) => sum+val, 0);
 }
 
