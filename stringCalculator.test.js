@@ -25,5 +25,5 @@ test('supports custom delimiter', () => {
 });
 
 test('throws on single negative number', () => {
-  expect(() => add("1,-2")).toThrow("negative numbers not allowed: -2");
+  expect(() => add("1,-5")).toThrow("negative numbers not allowed: -5");
 });
