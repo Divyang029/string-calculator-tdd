@@ -1,7 +1,19 @@
+// Escapes special characters in a string for safe use in RegExp.
 function escapeRegExp(str) {
     return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
+/**
+ * Adds numbers from a string input.
+ * 
+ * Supports:
+ * - Comma (`,`) and newline (`\n`) as default delimiters
+ * - Custom delimiter: `//<delimiter>\n` or `//[delim1][delim2]...\n`
+ * - Delimiters of any length (e.g., `[***]`)
+ * - Multiple custom delimiters
+ * - Ignores numbers greater than 1000
+ * - Throws an error listing all negative numbers
+*/
 function add(numbers) {
     if (numbers === "") return 0;
 
