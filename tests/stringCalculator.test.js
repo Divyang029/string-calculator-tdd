@@ -35,3 +35,8 @@ test("throws exception for all negative numbers", () => {
 test("ignores numbers greater than 1000", () => {
   expect(add("1,1001,1002")).toBe(1);
 })
+
+test("custom delimiter of any length", () => {
+  expect(add("//[*][%]\n1*2%3")).toBe(6);
+})
+
